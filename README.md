@@ -14,18 +14,18 @@ https://www.linkedin.com/pulse/what-microsoft-graph-christopher-barber-/
 
 Provided in the json file is a list of an original set of actions which I have outlined below. Feel free to download and reuse, I’ll be updating this connector as I develop it further. 
 
-Actions:
-•	GetTeams:
-•	Delete Channel:
-•	Retrieve Messages:
-•	MessageReplies:
-•	CloneTeam:
-•	CreateChannel:
-•	ArchiveTeam:
-•	GetTeamsApp:
-•	RemoveMember:
-•	AddOwner:
-•	RemoveOwner:
-•	AddMember:
-•	AddTabs:
-•	ChannelUpdates:
+Actions: 
+GetTeams: 
+Delete Channel: 
+Retrieve Messages: 
+MessageReplies: 
+CloneTeam: 
+CreateChannel: 
+ArchiveTeam: 
+GetTeamsApp: 
+RemoveMember: 
+AddOwner: 
+RemoveOwner: 
+AddMember: 
+AddTabs: 
+ChannelUpdates: 
