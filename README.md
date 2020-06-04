@@ -8,6 +8,7 @@ Overview of the Custom Connector with Demo:
 https://youtu.be/lxqpFYtHwOQ
 
 Articles:
+
 https://www.linkedin.com/pulse/creating-azure-app-registration-use-graph-api-barber-/
 
 https://www.linkedin.com/pulse/microsoft-teams-graph-api-christopher-barber-/
