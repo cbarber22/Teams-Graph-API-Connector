@@ -12,7 +12,6 @@ https://www.linkedin.com/pulse/creating-azure-app-registration-use-graph-api-bar
 https://www.linkedin.com/pulse/microsoft-teams-graph-api-christopher-barber-/
 https://www.linkedin.com/pulse/what-microsoft-graph-christopher-barber-/
 
-
 Provided in the json file is a list of an original set of actions which I have outlined below. Feel free to download and reuse, I’ll be updating this connector as I develop it further. 
 
 Actions:
