@@ -1,0 +1,1156 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "GetTeams",
+    "description": "This connector was built to assist in the management of Microsoft Teams utilizing the Graph API actions provided.",
+    "version": "1.0"
+  },
+  "host": "graph.microsoft.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/v1.0/teams/{id}": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "id"
+                },
+                "displayName": {
+                  "type": "string",
+                  "description": "displayName"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "description"
+                },
+                "internalId": {
+                  "type": "string",
+                  "description": "internalId"
+                },
+                "classification": {
+                  "type": "string",
+                  "description": "classification"
+                },
+                "specialization": {
+                  "type": "string",
+                  "description": "specialization"
+                },
+                "visibility": {
+                  "type": "string",
+                  "description": "visibility"
+                },
+                "webUrl": {
+                  "type": "string",
+                  "description": "webUrl"
+                },
+                "isArchived": {
+                  "type": "boolean",
+                  "description": "isArchived"
+                },
+                "discoverySettings": {
+                  "type": "object",
+                  "properties": {
+                    "showInTeamsSearchAndSuggestions": {
+                      "type": "boolean",
+                      "description": "showInTeamsSearchAndSuggestions"
+                    }
+                  },
+                  "description": "discoverySettings"
+                },
+                "memberSettings": {
+                  "type": "object",
+                  "properties": {
+                    "allowCreateUpdateChannels": {
+                      "type": "boolean",
+                      "description": "allowCreateUpdateChannels"
+                    },
+                    "allowDeleteChannels": {
+                      "type": "boolean",
+                      "description": "allowDeleteChannels"
+                    },
+                    "allowAddRemoveApps": {
+                      "type": "boolean",
+                      "description": "allowAddRemoveApps"
+                    },
+                    "allowCreateUpdateRemoveTabs": {
+                      "type": "boolean",
+                      "description": "allowCreateUpdateRemoveTabs"
+                    },
+                    "allowCreateUpdateRemoveConnectors": {
+                      "type": "boolean",
+                      "description": "allowCreateUpdateRemoveConnectors"
+                    }
+                  },
+                  "description": "memberSettings"
+                },
+                "guestSettings": {
+                  "type": "object",
+                  "properties": {
+                    "allowCreateUpdateChannels": {
+                      "type": "boolean",
+                      "description": "allowCreateUpdateChannels"
+                    },
+                    "allowDeleteChannels": {
+                      "type": "boolean",
+                      "description": "allowDeleteChannels"
+                    }
+                  },
+                  "description": "guestSettings"
+                },
+                "messagingSettings": {
+                  "type": "object",
+                  "properties": {
+                    "allowUserEditMessages": {
+                      "type": "boolean",
+                      "description": "allowUserEditMessages"
+                    },
+                    "allowUserDeleteMessages": {
+                      "type": "boolean",
+                      "description": "allowUserDeleteMessages"
+                    },
+                    "allowOwnerDeleteMessages": {
+                      "type": "boolean",
+                      "description": "allowOwnerDeleteMessages"
+                    },
+                    "allowTeamMentions": {
+                      "type": "boolean",
+                      "description": "allowTeamMentions"
+                    },
+                    "allowChannelMentions": {
+                      "type": "boolean",
+                      "description": "allowChannelMentions"
+                    }
+                  },
+                  "description": "messagingSettings"
+                },
+                "funSettings": {
+                  "type": "object",
+                  "properties": {
+                    "allowGiphy": {
+                      "type": "boolean",
+                      "description": "allowGiphy"
+                    },
+                    "giphyContentRating": {
+                      "type": "string",
+                      "description": "giphyContentRating"
+                    },
+                    "allowStickersAndMemes": {
+                      "type": "boolean",
+                      "description": "allowStickersAndMemes"
+                    },
+                    "allowCustomMemes": {
+                      "type": "boolean",
+                      "description": "allowCustomMemes"
+                    }
+                  },
+                  "description": "funSettings"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get a Team",
+        "description": "Get a Team by Team ID",
+        "operationId": "GetTeams",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/teams/{id1}/channels/{id2}": {
+      "delete": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "responses": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "status": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "status"
+                      },
+                      "body": {
+                        "type": "string",
+                        "description": "body"
+                      }
+                    }
+                  },
+                  "description": "responses"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Delete a Channel",
+        "description": "Delete a Channel",
+        "operationId": "DeleteChannel",
+        "parameters": [
+          {
+            "name": "id1",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id2",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "requests": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "description": "url"
+                      },
+                      "method": {
+                        "type": "string",
+                        "description": "method"
+                      },
+                      "id": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "id"
+                      },
+                      "headers": {
+                        "type": "object",
+                        "properties": {
+                          "Content-Type": {
+                            "type": "string",
+                            "description": "Content-Type"
+                          }
+                        },
+                        "description": "headers"
+                      }
+                    }
+                  },
+                  "description": "requests"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/beta//teams/{TeamID}/channels/{Channelid}/messages": {},
+    "/beta/teams/{id1}/channels/{id2}/messages": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "responses": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "status"
+                      },
+                      "headers": {
+                        "type": "object",
+                        "properties": {
+                          "OData-Version": {
+                            "type": "string",
+                            "description": "OData-Version"
+                          },
+                          "Content-Type": {
+                            "type": "string",
+                            "description": "Content-Type"
+                          }
+                        },
+                        "description": "headers"
+                      },
+                      "body": {
+                        "type": "object",
+                        "properties": {
+                          "@odata.context": {
+                            "type": "string",
+                            "description": "@odata.context"
+                          },
+                          "@odata.count": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "@odata.count"
+                          },
+                          "value": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "string",
+                                  "description": "id"
+                                },
+                                "replyToId": {
+                                  "type": "string",
+                                  "description": "replyToId"
+                                },
+                                "etag": {
+                                  "type": "string",
+                                  "description": "etag"
+                                },
+                                "messageType": {
+                                  "type": "string",
+                                  "description": "messageType"
+                                },
+                                "createdDateTime": {
+                                  "type": "string",
+                                  "description": "createdDateTime"
+                                },
+                                "lastModifiedDateTime": {
+                                  "type": "string",
+                                  "description": "lastModifiedDateTime"
+                                },
+                                "deletedDateTime": {
+                                  "type": "string",
+                                  "description": "deletedDateTime"
+                                },
+                                "subject": {
+                                  "type": "string",
+                                  "description": "subject"
+                                },
+                                "summary": {
+                                  "type": "string",
+                                  "description": "summary"
+                                },
+                                "importance": {
+                                  "type": "string",
+                                  "description": "importance"
+                                },
+                                "locale": {
+                                  "type": "string",
+                                  "description": "locale"
+                                },
+                                "webUrl": {
+                                  "type": "string",
+                                  "description": "webUrl"
+                                },
+                                "policyViolation": {
+                                  "type": "string",
+                                  "description": "policyViolation"
+                                },
+                                "from": {
+                                  "type": "object",
+                                  "properties": {
+                                    "application": {
+                                      "type": "string",
+                                      "description": "application"
+                                    },
+                                    "device": {
+                                      "type": "string",
+                                      "description": "device"
+                                    },
+                                    "conversation": {
+                                      "type": "string",
+                                      "description": "conversation"
+                                    },
+                                    "user": {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "string",
+                                          "description": "id"
+                                        },
+                                        "displayName": {
+                                          "type": "string",
+                                          "description": "displayName"
+                                        },
+                                        "userIdentityType": {
+                                          "type": "string",
+                                          "description": "userIdentityType"
+                                        }
+                                      },
+                                      "description": "user"
+                                    }
+                                  },
+                                  "description": "from"
+                                },
+                                "body": {
+                                  "type": "object",
+                                  "properties": {
+                                    "contentType": {
+                                      "type": "string",
+                                      "description": "contentType"
+                                    },
+                                    "content": {
+                                      "type": "string",
+                                      "description": "content"
+                                    }
+                                  },
+                                  "description": "body"
+                                },
+                                "attachments": {
+                                  "type": "array",
+                                  "items": {},
+                                  "description": "attachments"
+                                },
+                                "mentions": {
+                                  "type": "array",
+                                  "items": {},
+                                  "description": "mentions"
+                                },
+                                "reactions": {
+                                  "type": "array",
+                                  "items": {},
+                                  "description": "reactions"
+                                }
+                              }
+                            },
+                            "description": "value"
+                          }
+                        },
+                        "description": "body"
+                      }
+                    }
+                  },
+                  "description": "responses"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Retrieve a Channels Messages",
+        "description": "Retrieve a Channels Messages",
+        "operationId": "RetrieveMessages",
+        "parameters": [
+          {
+            "name": "id1",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id2",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/beta/teams/{teamid}/channels/{channelid}/messages/{messageid}/replies": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.context": {
+                  "type": "string",
+                  "description": "@odata.context"
+                },
+                "@odata.count": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "@odata.count"
+                },
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "id"
+                      },
+                      "replyToId": {
+                        "type": "string",
+                        "description": "replyToId"
+                      },
+                      "etag": {
+                        "type": "string",
+                        "description": "etag"
+                      },
+                      "messageType": {
+                        "type": "string",
+                        "description": "messageType"
+                      },
+                      "createdDateTime": {
+                        "type": "string",
+                        "description": "createdDateTime"
+                      },
+                      "lastModifiedDateTime": {
+                        "type": "string",
+                        "description": "lastModifiedDateTime"
+                      },
+                      "deletedDateTime": {
+                        "type": "string",
+                        "description": "deletedDateTime"
+                      },
+                      "subject": {
+                        "type": "string",
+                        "description": "subject"
+                      },
+                      "summary": {
+                        "type": "string",
+                        "description": "summary"
+                      },
+                      "importance": {
+                        "type": "string",
+                        "description": "importance"
+                      },
+                      "locale": {
+                        "type": "string",
+                        "description": "locale"
+                      },
+                      "policyViolation": {
+                        "type": "string",
+                        "description": "policyViolation"
+                      },
+                      "from": {
+                        "type": "object",
+                        "properties": {
+                          "application": {
+                            "type": "string",
+                            "description": "application"
+                          },
+                          "device": {
+                            "type": "string",
+                            "description": "device"
+                          },
+                          "conversation": {
+                            "type": "string",
+                            "description": "conversation"
+                          },
+                          "user": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "string",
+                                "description": "id"
+                              },
+                              "displayName": {
+                                "type": "string",
+                                "description": "displayName"
+                              },
+                              "userIdentityType": {
+                                "type": "string",
+                                "description": "userIdentityType"
+                              }
+                            },
+                            "description": "user"
+                          }
+                        },
+                        "description": "from"
+                      },
+                      "body": {
+                        "type": "object",
+                        "properties": {
+                          "contentType": {
+                            "type": "string",
+                            "description": "contentType"
+                          },
+                          "content": {
+                            "type": "string",
+                            "description": "content"
+                          }
+                        },
+                        "description": "body"
+                      },
+                      "attachments": {
+                        "type": "array",
+                        "items": {},
+                        "description": "attachments"
+                      },
+                      "mentions": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer",
+                              "format": "int32",
+                              "description": "id"
+                            },
+                            "mentionText": {
+                              "type": "string",
+                              "description": "mentionText"
+                            },
+                            "mentioned": {
+                              "type": "object",
+                              "properties": {
+                                "application": {
+                                  "type": "string",
+                                  "description": "application"
+                                },
+                                "device": {
+                                  "type": "string",
+                                  "description": "device"
+                                },
+                                "conversation": {
+                                  "type": "string",
+                                  "description": "conversation"
+                                },
+                                "user": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "string",
+                                      "description": "id"
+                                    },
+                                    "displayName": {
+                                      "type": "string",
+                                      "description": "displayName"
+                                    },
+                                    "userIdentityType": {
+                                      "type": "string",
+                                      "description": "userIdentityType"
+                                    }
+                                  },
+                                  "description": "user"
+                                }
+                              },
+                              "description": "mentioned"
+                            }
+                          }
+                        },
+                        "description": "mentions"
+                      },
+                      "reactions": {
+                        "type": "array",
+                        "items": {},
+                        "description": "reactions"
+                      }
+                    }
+                  },
+                  "description": "value"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Retrieve a Channels Message Replies",
+        "description": "Retrieve a Channels Message Replies",
+        "operationId": "MessageReplies",
+        "parameters": [
+          {
+            "name": "teamid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "channelid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "messageid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/GET https://graph.microsoft.com/beta/teams/{teamid}/channels/{channelid}/messages/{messageid}/replies": {},
+    "/v1.0/teams/{id}/clone": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "responses": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "status": {
+                        "type": "integer",
+                        "format": "int32",
+                        "description": "status"
+                      },
+                      "body": {
+                        "type": "object",
+                        "properties": {
+                          "error": {
+                            "type": "object",
+                            "properties": {
+                              "code": {
+                                "type": "string",
+                                "description": "code"
+                              },
+                              "message": {
+                                "type": "string",
+                                "description": "message"
+                              },
+                              "innerError": {
+                                "type": "object",
+                                "properties": {
+                                  "request-id": {
+                                    "type": "string",
+                                    "description": "request-id"
+                                  },
+                                  "date": {
+                                    "type": "string",
+                                    "description": "date"
+                                  }
+                                },
+                                "description": "innerError"
+                              }
+                            },
+                            "description": "error"
+                          }
+                        },
+                        "description": "body"
+                      }
+                    }
+                  },
+                  "description": "responses"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Clone a Team",
+        "description": "Clone a Team",
+        "operationId": "CloneTeam",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "displayName": {
+                  "type": "string",
+                  "description": "displayName"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "description"
+                },
+                "mailNickname": {
+                  "type": "string",
+                  "description": "mailNickname"
+                },
+                "partsToClone": {
+                  "type": "string",
+                  "description": "partsToClone"
+                },
+                "visibility": {
+                  "type": "string",
+                  "description": "visibility"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/v1.0/teams/{id}/channels": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Create a Channel for a Team",
+        "description": "Create a Channel for a Team",
+        "operationId": "CreateChannel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "displayName": {
+                  "type": "string",
+                  "description": "displayName"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "description"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/v1.0/teams/{id}/archive": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Archive a Team",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "shouldSetSpoSiteReadOnlyForMembers": {
+                  "type": "string",
+                  "description": "shouldSetSpoSiteReadOnlyForMembers"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Archive a Team",
+        "operationId": "ArchiveTeam"
+      }
+    },
+    "/v1.0/teams{id}installedApps": {},
+    "/v1.0/teams/{id}/installedApps": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "GetTeamsApps",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "description": "GetTeamsApps",
+        "operationId": "GetTeamsApps"
+      }
+    },
+    "/v1.0/groups/{id}/members/$ref": {},
+    "/v1.0/groups/{teamid}/members/{userid}/$ref": {
+      "delete": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Remove Member of Team",
+        "description": "Remove Member of Team",
+        "operationId": "RemoveMemberofTeam",
+        "parameters": [
+          {
+            "name": "teamid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "userid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/groups/{teamid}/owners/$ref": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add Team Owner",
+        "description": "Add Team Owner",
+        "operationId": "AddOwner",
+        "parameters": [
+          {
+            "name": "teamid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.id": {
+                  "type": "string",
+                  "description": "@odata.id",
+                  "title": "",
+                  "default": "https://graph.microsoft.com/v1.0/directoryObjects/{UserIDHere}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/v1.0/groups/{teamid}/owners/{userid}/$ref": {
+      "delete": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Remove Team Owner",
+        "description": "Remove Team Owner",
+        "operationId": "RemoveOwner",
+        "parameters": [
+          {
+            "name": "teamid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "userid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/v1.0/groups/{id}/members/{userid}/$ref": {},
+    "/v1.0/groups/{teamid}/members/$ref": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add Member to a Team",
+        "description": "Add Member to a Team",
+        "operationId": "AddMember",
+        "parameters": [
+          {
+            "name": "teamid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "@odata.id": {
+                  "type": "string",
+                  "description": "@odata.id",
+                  "title": "",
+                  "default": "https://graph.microsoft.com/v1.0/directoryObjects/{EnterUserIDHere}"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/v1.0/me/calendar": {},
+    "/v1.0/users/{user}/calendar": {},
+    "/v1.0/users/{user}/calendar/events": {},
+    "/beta/{UserID}/events": {},
+    "/beta/me/events": {},
+    "/v1.0/me/onlineMeetings": {},
+    "/beta/app/onlineMeetings": {},
+    "/teams/{teamid}/channels/{channelid}/tabs": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Add a Tab to a Channel",
+        "description": "Add a Tab to a Channel",
+        "operationId": "AddTabs",
+        "parameters": [
+          {
+            "name": "teamid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "channelid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "displayName": {
+                  "type": "string",
+                  "description": "displayName"
+                },
+                "teamsApp@odata.bind": {
+                  "type": "string",
+                  "description": "teamsApp@odata.bind"
+                },
+                "configuration": {
+                  "type": "object",
+                  "properties": {
+                    "entityId": {
+                      "type": "string",
+                      "description": "entityId"
+                    },
+                    "contentUrl": {
+                      "type": "string",
+                      "description": "contentUrl"
+                    },
+                    "websiteUrl": {
+                      "type": "string",
+                      "description": "websiteUrl"
+                    },
+                    "removeUrl": {
+                      "type": "string",
+                      "description": "removeUrl"
+                    }
+                  },
+                  "description": "configuration"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "/v1.0/teams/{teamid}/channels/{channelid}": {
+      "patch": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Update a Channel",
+        "description": "Update a Channel",
+        "operationId": "ChannelUpdate",
+        "parameters": [
+          {
+            "name": "teamid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "channelid",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "displayName": {
+                  "type": "string",
+                  "description": "displayName"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2_auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
+      "scopes": {}
+    }
+  },
+  "security": [
+    {
+      "oauth2_auth": []
+    }
+  ],
+  "tags": []
+}
