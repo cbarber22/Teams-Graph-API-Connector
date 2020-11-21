@@ -34,6 +34,20 @@ Actions:
 
 •	ArchiveTeam:
 
+•	GetTeamsApp:
+
+•	RemoveMember:
+
+•	AddOwner:
+
+•	RemoveOwner:
+
+•	AddMember:
+
+•	AddTabs:
+
+•	ChannelUpdates:
+
 Steps for Configuration:
 
 Configure App Registration in Azure Portal with the following permissions:
@@ -54,22 +68,13 @@ Configure Connector
 1.	Import the file provided.
 2.	Within the General Tab, provide a new icon & description for the connector.
 3.	Within the Security Tab select Auth Type of OAuth 2.0, select Azure Active Directory and fill in the required parameters.
+
    a.	Client ID: 
+
    b.	Client Secret: 
+
    c.	Tenant ID: 
+
    d.	Resource URL: https://graph.microsoft.com
 
 
-•	GetTeamsApp:
-
-•	RemoveMember:
-
-•	AddOwner:
-
-•	RemoveOwner:
-
-•	AddMember:
-
-•	AddTabs:
-
-•	ChannelUpdates:
