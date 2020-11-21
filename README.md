@@ -37,10 +37,15 @@ Actions:
 Steps for Configuration:
 
 Configure App Registration in Azure Portal with the following permissions:
+
    Directory.ReadWrite.All
+
    Group.ReadWrite.All
+   
    GroupMember.ReadWrite.All
+   
    User.Read
+   
    User.ReadWrite.All
    
 Import Connector File Provided within PowerApps
